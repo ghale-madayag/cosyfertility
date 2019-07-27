@@ -302,9 +302,7 @@ function get_patinfo() {
                 //coplaint
                 $("#lmp").val(val.comlmp);
                 $("#pmp").val(val.compmp);
-                if(val.comg=="on"){
-                    $('#comg').iCheck('check');
-                }
+                $('#comGAPL').val(val.comGAPL);
                 if(val.coma=="on"){
                     $('#coma').iCheck('check');
                 }

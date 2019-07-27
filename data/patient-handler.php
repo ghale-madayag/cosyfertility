@@ -151,7 +151,7 @@
 			'parHt' => $row->vis_parHt,
 			'parWt' => $row->vis_parWt,
 			'parBmi' => $row->vis_parBmi,
-			'comg' => $row->com_g,
+			'comGAPL' => $row->com_g,
 			'coma' => $row->com_a,
 			'comp' => $row->com_p,
 			'coml' => $row->com_l,
@@ -410,7 +410,7 @@
 
 				$sql->execute(array(
 					'pat_num' => isset($_POST['pat-num']) ? $_POST['pat-num']:null,
-					'g' => isset($_POST['comg']) ? $_POST['comg']:null,
+					'g' => isset($_POST['comGAPL']) ? $_POST['comGAPL']:null,
 					'a' => isset($_POST['coma']) ? $_POST['coma']:null,
 					'p' => isset($_POST['comp']) ? $_POST['comp']:null,
 					'l' => isset($_POST['coml']) ? $_POST['coml']:null,
@@ -885,7 +885,7 @@
 		$vis_parWt = isset($_POST['parWt']) ? $_POST['parWt']:null;
 		$vis_parBmi = isset($_POST['parBmi']) ? $_POST['parBmi']:null;
 
-		$g= isset($_POST['comg']) ? $_POST['comg']:null;
+		$g= isset($_POST['comGAPL']) ? $_POST['comGAPL']:null;
 		$a= isset($_POST['coma']) ? $_POST['coma']:null;
 		$p= isset($_POST['comp']) ? $_POST['comp']:null;
 		$l= isset($_POST['coml']) ? $_POST['coml']:null;

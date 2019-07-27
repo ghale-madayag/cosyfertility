@@ -273,33 +273,11 @@
 				<div class="row form-horizontal">
 					<div class="col-xs-12">
 						<div class="form-group">
-							<div class="col-sm-4"></div>
-							<div class="col-sm-3">
-								<input type="checkbox" name="comg" id="comg">
-								<label for="comg">
-									G:
-								</label>
+							<label for="comGAPL" class="col-sm-4 control-label"></label>
+							<div class="col-sm-6">
+								<input type="text" name="comGAPL" id="comGAPL" class="form-control" >	
 							</div>
-							<div class="col-sm-3">
-								<input type="checkbox" name="comp" id="comp">
-								<label for="p">
-									P:
-								</label>
-							</div>
-							<div class="col-sm-4"></div>
-							<div class="col-sm-3">
-								<input type="checkbox" name="coma" id="coma">
-								<label for="coma">
-									A:
-								</label>
-							</div>
-							<div class="col-sm-3">
-								<input type="checkbox" name="coml" id="coml">
-								<label for="coml">
-									L:
-								</label>
-							</div>
-						
+						</div>
 						<div class="form-group">
 							<label for="lmp" class="col-sm-4 control-label">LMP: </label>
 							<div class="col-sm-6">
@@ -366,7 +344,6 @@
 								<input type="checkbox" name="pmpl" id="pmpl">
 							</div>
 						</div>
-					</div>
 				</div>
 			</div>
 		</div>
