@@ -279,7 +279,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="lmp" class="col-sm-4 control-label">LMPS: </label>
+							<label for="lmp" class="col-sm-4 control-label">LMP: </label>
 							<div class="col-sm-6">
 								<div class="input-group date">
 									<div class="input-group-addon">
