@@ -1,5 +1,5 @@
 <div class="row">
-	<form method="post" id="form-usr-add" enctype="multipart/form-data">
+	<form method="post" id="form-semen-add" enctype="multipart/form-data">
 	<div class="col-md-8">
 		<div class="box box-default">
 			<div class="box-header with-border">
@@ -7,238 +7,273 @@
 			</div>
 			<div class="box-body" style="padding:20px;">
                 <div class="row">
-                    <div class="col-xs-16">
+                    <div class="col-xs-6">
                         <div class="form-group">
-                            <label for="pat-num" class="col-sm-4 control-label">Patient Number: </label>
-                            <input type="hidden" name="pat-num" id="pat-num" class="form-control">
-                            <div class="col-sm-6">
-                                <h4 id="pat-num-h" class="text-green"></h4>
-                            </div>
+							<label for="patname">Patient Name: </label>
+							<select id="patname" class="form-control select2" style="width:100%;;" name="patname" placeholder="Search..." required></select>	
                         </div>
                     </div>
                 </div>
 				<div class="row">
 					<div class="col-xs-6">
-                       
-					</div>
-					<div class="col-xs-6">
 						<div class="form-group">
-							<label for="urdate">Date: </label>
+							<label for="sadate">Date of Collection: </label>
 							<div class="input-group date">
 								<div class="input-group-addon">
 									<i class="fa fa-calendar"></i>
 								</div>
-								<input type="text" class="form-control pull-right" id="urdate" name="urdate" required>
+								<input type="text" class="form-control pull-right" id="sadate" name="sadate">
 							</div>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="moc">Method of Collection:</label>
+							<input type="text" class="form-control" id="moc" placeholder="" name="moc">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-6">
 						<div class="form-group">
-							<label for="pus">Pelvic Ultrasound:</label>
-							<select class="form-control" name="pus" id="pus">
-								<option disabled selected value="-1">Select Ultrasound</option>
-			                    <option value="Transvaginal">Transvaginal</option>
-			                    <option value="Transabdominal">Transabdominal</option>
-			                    <option value="Transrectal">Transrectal</option>
-			                </select>
+							<label for="abs">Abstinence:</label>
+							<input type="text" class="form-control" id="abs" placeholder="" name="abs">
 						</div>
 					</div>
 					<div class="col-xs-6">
 						<div class="form-group">
-							<label for="uterus">Uterus:</label>
-							<select class="form-control" name="uterus" id="uterus">
-								<option disabled selected value="-1">Select Uterus</option>
-			                    <option value="Antevered">Antevered</option>
-			                    <option value="Retroverted">Retroverted</option>
-			                    <option value="Midline">Midline</option>
-			                </select>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-6">
-						<label for="size1">Size: </label>
-						<div class="form-group">
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="size1" id="size1" class="form-control"  placeholder="cms">
-							</div>
-							<div class="col-xs-1">
-								<p><div class="fa fa-close"></div></p>
-							</div>
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="size2" id="size2" class="form-control"  placeholder="cms">
-							</div>
-							<div class="col-xs-1">
-								<p><div class="fa fa-close"></div></p>
-							</div>
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="size3" id="size3" class="form-control"  placeholder="cms">
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<div class="form-group">
-							<label for="contour">Contour:</label>
-							<select class="form-control" name="contour" id="contour">
-								<option disabled selected value="-1">Select Contour</option>
-			                    <option value="Smooth">Smooth</option>
-			                    <option value="Irregular">Irregular</option>
-			                </select>
+							<label for="toc">Time of collection:</label>
+							<input type="time" class="form-control" id="toc" placeholder="" name="toc">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-6">
 						<div class="form-group">
-							<label for="echopattern">Echopattern:</label>
-							<select class="form-control" name="echopattern" id="echopattern">
-								<option disabled selected value="-1">Select Echopattern</option>
-			                    <option value="Homogenous">Homogenous</option>
-			                    <option value="Heterogenous">Heterogenous</option>
-			                </select>
+							<label for="toa">Time of Assessment:</label>
+							<input type="time" class="form-control" id="toa" placeholder="" name="toa">
 						</div>
 					</div>
 					<div class="col-xs-6">
 						<div class="form-group">
-							<label for="echorem">Echopattern Remarks: </label>
-							<textarea class="form-control" rows="3" id="echorem" name="echorem"></textarea>
+							<label for="liqtim">Liquefaction time:</label>
+							<input type="text" class="form-control" id="liqtim" placeholder="" name="liqtim">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-6">
-						<label>Endometrium: </label>
 						<div class="form-group">
-							<div class="col-xs-4 no-padding">
-								<input type="text" name="endometrium" id="endometrium" class="form-control"  placeholder="cms. Thick">
-							</div>
-							<div class="col-xs-8">
-								<select class="form-control" name="endometrium_sel" id="endometrium_sel">
-									<option disabled selected value="-1">Select</option>
-				                    <option value="linear">Linear</option>
-				                    <option value="trilaminar">Trilaminar</option>
-				                    <option value="hyperechoic">Hyperechoic</option>
-				                    <option value="heterogenous">Heterogenous</option>
-				                    <option value="thickened">Thickened</option>
-			                	</select>
-							</div>
+							<label for="color">Color:</label>
+							<input type="text" class="form-control" id="color" placeholder="" name="color">
 						</div>
 					</div>
 					<div class="col-xs-6">
-						<label>Cervix:</label>
 						<div class="form-group">
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="cer1" id="cer1" class="form-control"  placeholder="cms">
-							</div>
-							<div class="col-xs-1">
-								<p><div class="fa fa-close"></div></p>
-							</div>
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="cer2" id="cer2" class="form-control"  placeholder="cms">
-							</div>
-							<div class="col-xs-5">
-								<label>
-									<input type="checkbox" name="urm" id="urm" class="flat-red">
-									&nbsp; Unremarkable
-								</label>
-							</div>
+							<label for="volume">Volume:</label>
+							<input type="text" class="form-control" id="volume" placeholder="" name="volume">
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="viscosity">Viscosity:</label>
+							<input type="text" class="form-control" id="viscosity" placeholder="" name="viscosity">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="ph">pH:</label>
+							<input type="text" class="form-control" id="ph" placeholder="" name="ph">
+						</div>
+					</div>
+				</div>
+				<br/>
+				<br/>
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="form-group">
-							<label>Endometrium Remarks:</label>
-							<textarea  class="form-control" row="3" id="endorem" name="endorem"></textarea>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-6">
-						<label>Right Ovary:</label>
-						<div class="form-group">
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="ro1" id="ro1" class="form-control"  placeholder="cms">
-							</div>
-							<div class="col-xs-1">
-								<p><div class="fa fa-close"></div></p>
-							</div>
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="ro2" id="ro2" class="form-control"  placeholder="cms">
-							</div>
-							<div class="col-xs-1">
-								<p><div class="fa fa-close"></div></p>
-							</div>
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="ro3" id="ro3" class="form-control"  placeholder="cms">
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6">
-						<label>Left Ovary:</label>
-						<div class="form-group">
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="lo1" id="lo1" class="form-control"  placeholder="cms">
-							</div>
-							<div class="col-xs-1">
-								<p><div class="fa fa-close"></div></p>
-							</div>
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="lo2" id="lo2" class="form-control"  placeholder="cms">
-							</div>
-							<div class="col-xs-1">
-								<p><div class="fa fa-close"></div></p>
-							</div>
-							<div class="col-xs-3 no-padding">
-								<input type="text" name="lo3" id="lo3" class="form-control"  placeholder="cms">
-							</div>
+							<label for="" style="font-style:italic;">Classification:</label>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-6">
 						<div class="form-group">
-							<label>Right Ovary Remarks:</label>
-							<textarea  class="form-control" row="3" id="rigrem" name="rigrem"></textarea>
+							<label for="clf1">Sperm concentration (Mill. per mL):</label>
+							<input type="text" class="form-control" id="clf1" placeholder="Normal Range" name="clf1">
 						</div>
 					</div>
 					<div class="col-xs-6">
 						<div class="form-group">
-							<label>Left Ovary Remarks:</label>
-							<textarea  class="form-control" row="3" id="lefrem" name="lefrem"></textarea>
+							<label for="clf2"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf2" placeholder="Result" name="clf2">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-6">
 						<div class="form-group">
-							<label for="cdsf">CUL-DE-SAC-FLUID:</label>
-							<select class="form-control" name="cdsf" id="cdsf">
-								<option disabled selected value="-1">Select CUL-DE-SAC-FLUID</option>
-			                    <option value="None">None</option>
-			                    <option value="Minimal">Minimal</option>
-								<option value="Ascites">Ascites</option>
-			                </select>
+							<label for="clf3">Total sperm number (Mill. per ejaculate):</label>
+							<input type="text" class="form-control" id="clf3" placeholder="Normal Range" name="clf3">
 						</div>
 					</div>
 					<div class="col-xs-6">
 						<div class="form-group">
-							<label for="opm">Other Pelvic Mass:</label>
-							<select class="form-control" name="opm" id="opm">
-								<option disabled selected value="-1">Select Pelvic Mass</option>
-			                    <option value="Absent">Absent</option>
-			                    <option value="Present">Present, Specifically</option>
-			                </select>
+							<label for="clf4"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf4" placeholder="Result" name="clf4">
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf5">Progressive motility (PR, %):</label>
+							<input type="text" class="form-control" id="clf5" placeholder="Normal Range" name="clf5">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf6"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf6" placeholder="Result" name="clf6">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf7">Non-progressive motility (NP, %):</label>
+							<input type="text" class="form-control" id="clf7" placeholder="Normal Range" name="clf7">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf8"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf8" placeholder="Result" name="clf8">
+						</div>
+					</div>
+				</div>
+				<br/>
+				<br/>
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="form-group">
-							<label for="impre">Impression: </label>
-							<textarea class="form-control" rows="3" id="impre" name="impre"></textarea>
+							<label for="" style="font-style:italic;">Sperm morphology:</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf9">Normal forms (%):</label>
+							<input type="text" class="form-control" id="clf9" placeholder="Normal Range" name="clf9">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf10"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf10" placeholder="Result" name="clf10">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf11">Head defect (%):</label>
+							<input type="text" class="form-control" id="clf11" placeholder="Normal Range" name="clf11">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf12"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf12" placeholder="Result" name="clf12">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf13">Midpiece defect (%):</label>
+							<input type="text" class="form-control" id="clf13" placeholder="Normal Range" name="clf13">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf14"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf14" placeholder="Result" name="clf14">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf15">Tail defect (%):</label>
+							<input type="text" class="form-control" id="clf15" placeholder="Normal Range" name="clf15">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf16"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf16" placeholder="Result" name="clf16">
+						</div>
+					</div>
+				</div>
+				<br/>
+				<br/>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf17">Vitality (Live spermatozoa, %):</label>
+							<input type="text" class="form-control" id="clf17" placeholder="Normal Range" name="clf17">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf18"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf18" placeholder="Result" name="clf18">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf19">Round cells (Mill. per mL):</label>
+							<input type="text" class="form-control" id="clf19" placeholder="Normal Range" name="clf19">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf20"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf20" placeholder="Result" name="clf20">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf21">Immature germ cell (Mill per mL):</label>
+							<input type="text" class="form-control" id="clf21" placeholder="Normal Range" name="clf21">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf22"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf22" placeholder="Result" name="clf22">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf23">Agglutination:</label>
+							<input type="text" class="form-control" id="clf23" placeholder="Normal Range" name="clf23">
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="form-group">
+							<label for="clf24"><span class="clfres">-</span></label>
+							<input type="text" class="form-control" id="clf24" placeholder="Result" name="clf24">
 						</div>
 					</div>
 				</div>

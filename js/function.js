@@ -509,6 +509,31 @@ function recentUsr() {
 	  }
 	})
 }
+function recentSemen() {
+	var users = $(".products-list").empty();
+	$.ajax({
+	  type: 'POST',
+	  url: 'data/recent-handler.php',
+	  data: "semen=true",
+	  cache: false,
+	  success: function(data){
+	    var json = $.parseJSON(data);
+	      $(json).each(function(i,val){
+					
+					var formData = val.num;
+					var encryptedAES = CryptoJS.AES.encrypt(formData, "My Secret Passphrase");
+	          users.append('<li class="item">'+
+	          	'<div class="product-img circle-text">'+val.img+'</div>'+
+		        	'<div class="product-info">'+
+		          '<a href="usr-view.php?patient='+encryptedAES+'" class="product-title">'+val.fullname+'</a>'+
+		          '<span class="product-description">Date: <strong>'+val.date+
+		              '</strong></span>'+
+		        '</div>'+
+		      '</li>');
+	      });
+	  }
+	})
+}
 function recentTar() {
 	var users = $(".products-list").empty();
 	$.ajax({

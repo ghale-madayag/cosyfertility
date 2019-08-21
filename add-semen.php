@@ -105,17 +105,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="js/toast-func.js"></script>
 <script src="js/aes.js"></script>
 <script src="js/function.js"></script>
-<script src="js/usr.js"></script>
+<script src="js/semen.js"></script>
 <script type="text/javascript">
   loadProfile(<?php echo $_SESSION['user_id'];?>);
-  icheckboxUsr();
+  //icheckboxUsr();
   getPatName();
-  recentUsr();
+  recentSemen();
   $('#datepicker').datepicker({
       autoclose: true
     })
 
-  $('#urdate').datepicker({
+  $('#sadate').datepicker({
       autoclose: true
     })
 

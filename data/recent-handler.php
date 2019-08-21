@@ -122,5 +122,30 @@
         }
         
         echo json_encode($result);
+	}elseif (isset($_POST['semen'])) {
+		$sql = $handler->prepare("SELECT sie_id, pat_fname, pat_mname, pat_lname, sie_indate  FROM patient RIGHT JOIN siemen ON 
+		patient.pat_num = siemen.pat_num ORDER BY sie_indate DESC LIMIT 10");
+		$sql->execute();
+
+		while ($r = $sql->fetch(PDO::FETCH_OBJ)) {
+			if ($r->pat_mname!="") {
+				$lname = ucfirst($r->pat_mname).".";
+			}else{
+				$lname = "";
+			}
+
+			$fullname = ucfirst($r->pat_fname)." ".$lname." ".ucfirst($r->pat_lname);
+			$dateCre = date_create($r->sie_indate);
+			$date = date_format($dateCre, 'M. d, Y');
+
+			$result[] = array(
+				'num' => $r->sie_id,
+				'fullname' => $fullname,
+				'img' => substr(ucfirst($r->pat_fname), 0, 1)."".substr(ucfirst($r->pat_lname), 0, 1),
+				'date' => $date
+            );
+        }
+        
+        echo json_encode($result);
 	}
 ?>

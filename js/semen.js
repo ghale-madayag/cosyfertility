@@ -1,5 +1,26 @@
 $(document).ready(function(){
-    
+    $("form#form-semen-add").on('submit', function(e) {
+        var formData = new FormData($(this)[0]);
+        $.ajax({
+            type: "POST",
+            url: "data/semen-handler.php",
+            data: formData,
+            cache: false,
+            async: false,
+            processData: false,
+            contentType: false,
+            success: function(data){
+                if (data==1) {
+                    $("input[type=text],input[type=number],input[type=time] textarea").val("");
+                    $("#patname").val('').change();
+                    //recentUsr();
+                    toastSuccess("Successfully Registered", "You added new data <a href='all-semen.php'> View All</a>");
+                }
+            }
+        })
+        
+        e.preventDefault();
+    })
 })
 
 function getAllSemen(){
@@ -55,7 +76,7 @@ function getAllSemen(){
          '<div class="btn-group">'+
             '<button type="button" class="btn btn-default btn-sm" id="del" title="Delete"><i class="fa fa-trash-o"></i> Delete</button>'+
             '<button type="button" class="btn btn-default btn-sm" id="edit" title="Edit"><i class="fa fa-edit"></i> Edit</button>'+
-            '<button type="button" class="btn btn-default btn-sm" title="Add" onclick="window.location.href=\'add-usr.php\'"><i class="fa fa-plus"></i> Add New</button>'+
+            '<button type="button" class="btn btn-default btn-sm" title="Add" onclick="window.location.href=\'add-semen.php\'"><i class="fa fa-plus"></i> Add New</button>'+
             '<button type="button" class="btn btn-default btn-sm" id="print" title="Print"><i class="fa fa-print"></i> Print</button>'+
             '<button type="button" class="btn btn-default btn-sm" id="export" title="Export"><i class="fa fa-cloud-download"></i> Export to Excel</button>'+
           '</div>'+
