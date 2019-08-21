@@ -840,15 +840,53 @@
             'embryologist' => isset($_POST['embryologist']) ? $_POST['embryologist'] : null
         ));
 
-	
-			echo 1;
+		$sql = $handler->prepare("INSERT INTO 
+		siemen(
+			`pat_num`,
+			`sie_sadate`,
+			`sie_moc`,
+			`sie_abs`,
+			`sie_toc`,
+			`sie_toa`,
+			`sie_liqtim`,
+			`sie_color`,
+			`sie_volume`,
+			`sie_viscosity`,
+			`sie_ph`
+		) 
+		VALUES(
+			:pat_num,
+			:sie_sadate,
+			:sie_moc,
+			:sie_abs,
+			:sie_toc,
+			:sie_toa,
+			:sie_liqtim,
+			:sie_color,
+			:sie_volume,
+			:sie_viscosity,
+			:sie_ph
+			)
+		");
 
+		$sql->execute(array(
+            'pat_num' => $patnum,
+			'sie_sadate' => isset($_POST['sadate']) ? $_POST['sadate'] : null,
+			'sie_moc' => isset($_POST['moc']) ? $_POST['moc'] : null,
+			'sie_abs' => isset($_POST['abs']) ? $_POST['abs'] : null,
+			'sie_toc' => isset($_POST['toc']) ? $_POST['toc'] : null,
+			'sie_toa' => isset($_POST['toa']) ? $_POST['toa'] : null,
+			'sie_liqtim' => isset($_POST['liqtim']) ? $_POST['liqtim'] : null,
+			'sie_color' => isset($_POST['color']) ? $_POST['color'] : null,
+			'sie_volume' => isset($_POST['volume']) ? $_POST['volume'] : null,
+			'sie_viscosity' => isset($_POST['viscosity']) ? $_POST['viscosity'] : null,
+			'sie_ph' => isset($_POST['ph']) ? $_POST['ph'] : null
+		));
+				// $date = $_POST['toc']; 
+				// echo date('h:i a', strtotime($date));
+				echo 1;
 			}
-
-			
-		
 		}
-
 	}elseif (isset($_POST['pat-num-edit'])) {
 		$pat_num = $_POST['pat-num-edit'];
 		$lname = $_POST['lname'];
