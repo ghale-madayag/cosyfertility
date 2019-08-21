@@ -83,6 +83,10 @@ $(document).ready(function() {
 		$("#planMenu").addClass('active');
 	}else if(page=="follow-up-add.php"){
 		$("#planMenu").addClass('active');
+	}else if(page=="add-semen.php"){
+		$("#semen").addClass('active');
+	}else if(page=="all-semen.php"){
+		$("#semen").addClass('active');
 	}else{
 		$("#dashboard").addClass('active');
 	}
