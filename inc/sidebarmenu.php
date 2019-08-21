@@ -56,6 +56,7 @@
   <li id="usr"><a href="all-usr.php"><i class="fa fa-heartbeat"></i> <span>Ultrasound Report</span></a></li>
   <li id="tar"><a href="all-tar.php"><i class="fa fa-heart"></i> <span>Trans-Abdominal Report</span></a></li>
   <li id="esr"><a href="all-esr.php"><i class="fa fa-medkit"></i> <span>Embryology Report</span></a></li>
+  <li id="semen"><a href="all-semen.php"><i class="fa fa-flask"></i><span>Semen Analysis Report</span></a></li>
   <li><a href="backup-restore.php"><i class="fa fa-database"></i> <span>Backup & Restore</span></a></li>
 
 </ul>

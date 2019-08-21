@@ -956,8 +956,7 @@
 			'sie_clf23' => isset($_POST['clf23']) ? $_POST['clf23'] : null,
 			'sie_clf24' => isset($_POST['clf24']) ? $_POST['clf24'] : null
 		));
-				// $date = $_POST['toc']; 
-				// echo date('h:i a', strtotime($date));
+				
 				echo 1;
 			}
 		}
