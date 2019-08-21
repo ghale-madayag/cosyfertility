@@ -56,6 +56,32 @@ $(document).ready(function(){
             });
         }
     })
+
+    $("#del").on('click', function(){
+        var len = $("input[name='semen-chk']:checked").length;
+
+        if(len==0){
+            alert('Please select record');
+        }else{
+           var del = confirm("Are you sure you want to delete the patient record?");
+
+           if(del==true){
+                $.each($("input[name='semen-chk']:checked"), function(){
+                    var formData = $(this).val();
+                    $.ajax({
+                        type: "POST",
+                        url: "data/semen-handler.php",
+                        data: "del=true&semen="+formData,
+                        cache: false,
+                        success: function(data){
+                            toastSuccess("Successfully Deleted", "Record was successfully deleted");
+                            refresh("semen-all");
+                        }
+                    })
+                });
+           }
+        }
+    })
 })
 
 function getAllSemen(){

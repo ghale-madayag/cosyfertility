@@ -124,11 +124,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
       var clicks = $(this).data('clicks');
       if (clicks) {
         //Uncheck all checkboxes
-        $(".usr-all input[type='checkbox']").iCheck("uncheck");
+        $(".semen-all input[type='checkbox']").iCheck("uncheck");
         $(".fa", this).removeClass("fa-check-square-o").addClass('fa-square-o');
       } else {
         //Check all checkboxes
-        $(".usr-all input[type='checkbox']").iCheck("check");
+        $(".semen-all input[type='checkbox']").iCheck("check");
         $(".fa", this).removeClass("fa-square-o").addClass('fa-check-square-o');
       }
       $(this).data("clicks", !clicks);

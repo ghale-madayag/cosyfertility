@@ -305,6 +305,15 @@
 		));
 
 		echo 1;
+
+	}elseif (isset($_POST['del'])) {
+
+		$semen = $_POST['semen'];
+		
+		$sql = $handler->prepare("DELETE FROM siemen WHERE sie_id = :semen");
+		$sql->execute(array('semen'=>$semen));
+
+		echo 1;
     } else {
         $result = "";
 
