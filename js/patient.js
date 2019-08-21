@@ -45,7 +45,7 @@ $(document).ready(function() {
                 console.log(data)
 				//clear all fields
                 if (data==1) {
-                    $("input[type=text],input[type=email], textarea").val("");
+                    $("input[type=text],input[type=email],input[type=time],textarea").val("");
                     $("#socstat").val('-1');
                     $("#complaint").val('-1');
                     $('input').iCheck('uncheck'); 
